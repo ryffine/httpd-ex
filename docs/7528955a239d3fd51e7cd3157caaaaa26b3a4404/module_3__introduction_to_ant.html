@@ -1,0 +1,374 @@
+<html xml:lang="en-us" lang="en-us">
+   
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="description" content="Come back and populate shortdesc In this module, participants will learn about Ant, the open-source Apache language that executes and coordinates DITA-OT builds and transformations. Participants will ..." />
+      <meta class="swiftype" name="type" data-type="string" content="concept" />
+      <meta class="swiftype" name="coverage" data-type="string" content="ant" />
+      <meta class="swiftype" name="related-links" data-type="text" content="introduction_to_ant.html" />
+      <meta class="swiftype" name="related-links" data-type="text" content="create_a_simple_ant_file.html" />
+      <meta class="swiftype" name="related-links" data-type="text" content="parsing_an_ant_file.html" />
+      <meta class="swiftype" name="related-links" data-type="text" content="create_new_publishing_parameters.html" />
+      <meta class="swiftype" name="audienceExperiencelevel" data-type="string" content="intermediate" />
+      <meta class="swiftype" name="format" data-type="string" content="XHTML" />
+      <meta class="swiftype" name="identifier" data-type="string" content="module_3__introduction_to_ant" />
+      <title>Module 3: Ant basics</title>
+      <!--  Generated with Oxygen version 19.1, build number 2017121318.  -->
+      <meta name="wh-path2root" content="" />
+      <meta name="wh-toc-id" content="module_3__introduction_to_ant-d58e234" />
+      
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script>
+          function debug(msg, object){
+              console.log(msg, object);
+          }
+          function executeQuery(){
+              $('#searchForm').submit();
+              return true;
+          }
+      </script>
+      
+      <link rel="stylesheet" type="text/css" href="oxygen-webhelp/resources/css/commonltr.css?buildId=2017121318" />
+      
+      
+      <link rel="stylesheet" type="text/css" href="oxygen-webhelp/resources/css/webhelp_responsive_topic.css?buildId=2017121318" />
+      
+      
+      <!-- Latest compiled and minified Bootstrap CSS -->
+      
+      <link rel="stylesheet" type="text/css" href="oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css" />
+      
+      
+      <!-- Bootstrap Optional theme -->
+      
+      <link rel="stylesheet" href="oxygen-webhelp/resources/bootstrap/css/bootstrap-theme.min.css" />
+      
+      <link rel="stylesheet" href="oxygen-webhelp/resources/js/jquery-ui.min.css" />
+      
+      <!-- Changes and comments, as side-notes  -->
+      
+      <link rel="stylesheet" type="text/css" href="oxygen-webhelp/resources/css/p-side-notes.css?buildId=2017121318" />
+      
+      
+      
+      <!-- Template default styles  -->
+      
+      <link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/wt_default.css?buildId=2017121318" />
+      
+      
+      <!-- Expand-collapse support styles  -->
+      
+      <link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/wt_expand.css?buildId=2017121318" />
+      
+      
+      <script type="text/javascript" src="oxygen-webhelp/resources/js/jquery-3.1.1.min.js">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/resources/localization/strings.js?buildId=2017121318">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/resources/js/localization.js?buildId=2017121318">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/resources/js/parseuri.js?buildId=2017121318">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/resources/js/jquery.cookie.js">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/resources/js/jquery-ui.min.js">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/resources/js/jquery.highlight-3.js">
+         <!----></script>
+      
+      
+      <!-- Top Menu and Side TOC components resources -->
+      <link type="text/css" href="oxygen-webhelp/nav-links/nav-links.css" rel="stylesheet" />
+      
+      <link type="text/css" href="oxygen-webhelp/nav-links/tooltip.css" rel="stylesheet" />
+      <script data-main="oxygen-webhelp/nav-links/nav-links-init.js" src="oxygen-webhelp/lib/requirejs/require.js"></script>
+      
+      
+      <!-- Skin resources -->
+      <link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/variants/tiles/orange/skin.css?buildId=2017121318" />
+      
+      <!-- EXM-36950 - Expand the args.hdf parameter here -->
+      
+      
+      
+   </head>
+   
+   
+   <body onload="highlightSearchTerm()" class="wh_topic_page frmBody" id="module_3__introduction_to_ant">
+      
+      <!-- EXM-36950 - Expand the args.hdr parameter here -->
+      
+      
+      
+      
+      <nav class="navbar navbar-default wh_header">
+         
+         <div class="container">
+            
+            <div class="wh_header_flex_container">
+               
+               <div class="wh_logo_and_publication_title_container">
+                  
+                  <div class="wh_logo_and_publication_title">
+                     
+                     
+                     <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                     <a href="index.html" class=" wh_logo hidden-xs "></a>
+                     
+                     <div class=" wh_publication_title "><a href="index.html"><span class="title">Publishing Course Package</span></a></div>
+                     
+                     
+                  </div>
+                  
+                  
+                  <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                  <button type="button" data-target=".wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggle collapsed wh_toggle_button">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                  
+               </div>
+               
+               
+               <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse">
+                  <script type="text/javascript">
+    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+    
+    _st('install','gpwGSUCpAyDunkkj-phs','2.0.0');
+</script>
+                  <div class=" wh_top_menu ">
+                     <ul>
+                        
+                        <li><span data-tocid="course_introduction-d58e11" data-state="leaf" class=" topicref "><span class="title"><a href="course_introduction.html" data-id="course_introduction">Course introduction and prerequisites</a></span></span></li>
+                        
+                        <li><span data-tocid="module_1__introduction_to_the_dita_ot-d58e34" data-state="leaf" class=" topicref "><span class="title"><a href="module_1__introduction_to_the_dita_ot.html" data-id="module_1__introduction_to_the_dita_ot">Module 1: Introduction to the DITA-OT</a></span></span></li>
+                        
+                        <li><span data-tocid="module_2__xsl_basics-d58e112" data-state="leaf" class=" topicref "><span class="title"><a href="module_2__xsl_basics.html" data-id="module_2__xsl_basics">Module 2: XSL basics</a></span></span></li>
+                        
+                        <li><span data-tocid="module_3__introduction_to_ant-d58e234" data-state="leaf" class=" topicref "><span class="title"><a href="module_3__introduction_to_ant.html" data-id="module_3__introduction_to_ant">Module 3: Ant basics</a></span></span></li>
+                        
+                        <li><span data-tocid="module_4__extend_the_dita_ot-d58e291" data-state="leaf" class=" topicref "><span class="title"><a href="module_4__extend_the_dita_ot.html" data-id="module_4__extend_the_dita_ot">Module 4: Extend the DITA-OT</a></span></span></li>
+                        
+                        <li><span data-tocid="module_5__overwrite_base_plugin_styles_with_xsl_fo-d58e380" data-state="leaf" class=" topicref "><span class="title"><a href="module_5__overwrite_base_plugin_styles_with_xsl_fo.html" data-id="module_5__overwrite_base_plugin_styles_with_xsl_fo">Module 5: Overwrite base plugin styles with XSL-FO</a></span></span></li>
+                        
+                     </ul>
+                  </div>
+                  
+                  
+                  
+               </div>
+               
+            </div>
+            
+         </div>
+         
+      </nav>
+      
+      <script type="text/javascript">
+            (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+            (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+            })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+            
+            _st('install','5drMLN8SbsfrnpzEKVjv','2.0.0');
+        </script><div class=" wh_search_input "><input type="text" class="st-default-search-input" /></div>
+      
+      
+      <div class="container">
+         
+         <div class="row">
+            
+            
+            <nav class="wh_tools hidden-print">
+               
+               <div data-tooltip-position="bottom" class=" wh_breadcrumb ">
+                  <ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print">
+                     <li><span class="home"><a href="index.html"><span>Home</span></a></span></li>
+                     
+                     <li class="active"><span class="topicref"><span class="title"><a href="module_3__introduction_to_ant.html">Module 3: Ant basics</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Come back and populate shortdesc</p>
+                                 </span></span></span></li>
+                     
+                  </ol>
+               </div>
+               
+               
+               <div class="wh_right_tools hidden-sm hidden-xs">
+                  
+                  <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader"></span></div>
+                  
+                  <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"></a></div>
+                  <button class="wh_hide_highlight" title="Show/Hide the search highlights"></button>
+                  
+               </div>
+               
+            </nav>
+            
+         </div>
+         
+         
+         <div class="wh_content_area">
+            
+            <div class="row">
+               
+               <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                  
+                  <div data-swiftype-index="true" class=" wh_topic_content body ">
+                     <main role="main">
+                        <article role="article" aria-labelledby="ariaid-title1">
+                           
+                           <h1 class="title topictitle1" id="ariaid-title1">Module 3: Ant basics</h1>
+                           
+                           
+                           <div class="body conbody">
+                              <p class="shortdesc">Come back and populate shortdesc</p>
+                              
+                              
+                              <p class="p">In this module, participants will learn about Ant, the open-source Apache language
+                                 that
+                                 executes and coordinates DITA-OT builds and transformations. Participants will use
+                                 Ant
+                                 to pass publishing parameters to the XSLT files created in Module 2. This module
+                                 provides participants with the background information required to build DITA-OT plugins,
+                                 and to debug the files responsible for executing DITA-OT builds.
+                              </p>
+                              
+                              
+                              <p class="p">After watching the videos in this module, participants will be able to:</p>
+                              
+                              
+                              <ul class="ul">
+                                 
+                                 <li class="li">
+                                    <p class="p">Explain the relationship between ANT files, the DITA-OT build process, and
+                                       DITA-OT build parameters
+                                    </p>
+                                    
+                                 </li>
+                                 
+                                 
+                                 <li class="li">
+                                    <p class="p">Describe and create Ant projects, targets, and condition elements</p>
+                                    
+                                 </li>
+                                 
+                                 
+                                 <li class="li">
+                                    <p class="p">Explain how Ant files are parsed and executed</p>
+                                    
+                                 </li>
+                                 
+                                 
+                                 <li class="li">
+                                    <p class="p">Create new parameters using a simple Ant build file</p>
+                                    
+                                 </li>
+                                 
+                                 
+                              </ul>
+                              
+                              
+                           </div>
+                           
+                           
+                        </article>
+                     </main>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+               </div>
+               
+               <nav role="navigation" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 navbar hidden-print" id="wh_side_toc">
+                  
+                  <div class=" wh_side_toc " data-tooltip-position="left">
+                     <ul>
+                        
+                        <li class="active"><span data-tocid="module_3__introduction_to_ant-d58e234" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="module_3__introduction_to_ant.html">Module 3: Ant basics</a><span class="wh-tooltip">
+                                    
+                                    <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Come back and populate shortdesc</p>
+                                    </span></span></span><ul class="nav nav-list">
+                              
+                              <li><span data-tocid="introduction_to_ant-d58e245" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="introduction_to_ant.html">Introduction to Ant</a><span class="wh-tooltip">
+                                          
+                                          <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Come back and populate shortdesc</p>
+                                          </span></span></span></li>
+                              
+                              <li><span data-tocid="create_a_simple_ant_file-d58e256" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="create_a_simple_ant_file.html">Create a simple Ant file</a><span class="wh-tooltip">
+                                          
+                                          <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Come back and populate shortdesc</p>
+                                          </span></span></span></li>
+                              
+                              <li><span data-tocid="parsing_an_ant_file-d58e267" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="parsing_an_ant_file.html">Parsing an Ant file</a><span class="wh-tooltip">
+                                          
+                                          <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Come back and populate shortdesc</p>
+                                          </span></span></span></li>
+                              
+                              <li><span data-tocid="create_new_publishing_parameters-d58e278" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="create_new_publishing_parameters.html">Run a transformation and create parameters with Ant</a><span class="wh-tooltip">
+                                          
+                                          <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Come back and populate shortdesc</p>
+                                          </span></span></span></li>
+                              
+                           </ul>
+                           
+                        </li>
+                        
+                     </ul>
+                  </div>
+                  
+               </nav>
+               
+            </div>
+            
+         </div>
+         
+      </div> 
+      <nav class="navbar navbar-default wh_footer">
+         
+         <div class=" footer-container text-center ">
+            Availit Content Portal
+            
+         </div>
+         
+      </nav>
+      
+      <!-- Latest compiled and minified JavaScript -->
+      
+      
+      <div id="go2top">
+         <span class="glyphicon glyphicon-chevron-up"></span>
+         
+      </div>
+      
+      <script src="oxygen-webhelp/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="oxygen-webhelp/template/resources/js/wt_default.js?buildId=2017121318" type="text/javascript"></script>
+      
+      <!-- Expand/collapse support -->
+      <script src="oxygen-webhelp/template/resources/js/wt_expand.js?buildId=2017121318" type="text/javascript"></script>
+      
+      
+      
+      <!-- Search autocomplete -->
+      <script type="text/javascript" src="oxygen-webhelp/search/keywords.js?uniqueId=20180206071819">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/search/searchAutocomplete.js?buildId=2017121318">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/search/searchHistoryItems.js?buildId=2017121318">
+         <!----></script>
+      <script type="text/javascript" src="oxygen-webhelp/search/searchOptions.js?uniqueId=20180206071819">
+         <!----></script>
+      </body>
+   
+</html>

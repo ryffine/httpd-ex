@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"Welcome to the course!","shortdesc":"<p class=\"shortdesc\">Come back and populate shortdesc</p>\n","id":"what_you_ll_learn","href":"what_you_ll_learn.html","menu": {"hasChildren":false,},"tocID":"what_you_ll_learn-d58e22","topics":[]}]});

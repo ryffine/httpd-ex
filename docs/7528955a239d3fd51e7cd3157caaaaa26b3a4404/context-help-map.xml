@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="course_introduction" path="course_introduction.html"/>
+   <appContext helpID="what_you_ll_learn" path="what_you_ll_learn.html"/>
+   <appContext helpID="module_1__introduction_to_the_dita_ot"
+               path="module_1__introduction_to_the_dita_ot.html"/>
+   <appContext helpID="role_of_the_publishing_specialist"
+               path="role_of_the_publishing_specialist.html"/>
+   <appContext helpID="manipulate_output_with_dita_metadata"
+               path="manipulate_output_with_dita_metadata.html"/>
+   <appContext helpID="manipulate_published_output_with_dita_ot_parameters"
+               path="manipulate_published_output_with_dita_ot_parameters.html"/>
+   <appContext helpID="languages_of_the_dita_ot" path="languages_of_the_dita_ot.html"/>
+   <appContext helpID="dita_ot_build_process" path="dita_ot_build_process.html"/>
+   <appContext helpID="xml_dom" path="xml_dom.html"/>
+   <appContext helpID="module_2__xsl_basics" path="module_2__xsl_basics.html"/>
+   <appContext helpID="introduction_to_xsl" path="introduction_to_xsl.html"/>
+   <appContext helpID="create_an_xslt_file" path="create_an_xslt_file.html"/>
+   <appContext helpID="use_the_xslt_view_in_oxygen"
+               path="use_the_xslt_view_in_oxygen.html"/>
+   <appContext helpID="transform_elements_and_attributes"
+               path="transform_elements_and_attributes.html"/>
+   <appContext helpID="insert_elements__attributes__and_text"
+               path="insert_elements__attributes__and_text.html"/>
+   <appContext helpID="parsing_an_xslt_file" path="parsing_an_xslt_file.html"/>
+   <appContext helpID="specializations_and_domains"
+               path="specializations_and_domains.html"/>
+   <appContext helpID="cannonicalize_a_topic" path="cannonicalize_a_topic.html"/>
+   <appContext helpID="transform_dita_to_basic_html"
+               path="transform_dita_to_basic_html.html"/>
+   <appContext helpID="xpath_and_more_advanced_transformations"
+               path="xpath_and_more_advanced_transformations.html"/>
+   <appContext helpID="module_3__introduction_to_ant"
+               path="module_3__introduction_to_ant.html"/>
+   <appContext helpID="introduction_to_ant" path="introduction_to_ant.html"/>
+   <appContext helpID="create_a_simple_ant_file" path="create_a_simple_ant_file.html"/>
+   <appContext helpID="parsing_an_ant_file" path="parsing_an_ant_file.html"/>
+   <appContext helpID="create_new_publishing_parameters"
+               path="create_new_publishing_parameters.html"/>
+   <appContext helpID="module_4__extend_the_dita_ot"
+               path="module_4__extend_the_dita_ot.html"/>
+   <appContext helpID="the_structure_of_the_dita_ot"
+               path="the_structure_of_the_dita_ot.html"/>
+   <appContext helpID="dita_ot_build_files" path="dita_ot_build_files.html"/>
+   <appContext helpID="create_a_new_plugin" path="create_a_new_plugin.html"/>
+   <appContext helpID="set_up_pdf_extension_points"
+               path="set_up_pdf_extension_points.html"/>
+   <appContext helpID="set_up_a_pdf_integration_file"
+               path="set_up_a_pdf_integration_file.html"/>
+   <appContext helpID="install_the_plugin" path="install_the_plugin.html"/>
+   <appContext helpID="set_up_the_transformation_scenario"
+               path="set_up_the_transformation_scenario.html"/>
+   <appContext helpID="module_5__overwrite_base_plugin_styles_with_xsl_fo"
+               path="module_5__overwrite_base_plugin_styles_with_xsl_fo.html"/>
+   <appContext helpID="introduction_to_xsl_fo" path="introduction_to_xsl_fo.html"/>
+   <appContext helpID="create_a_simple_xsl_fo_file"
+               path="create_a_simple_xsl_fo_file.html"/>
+   <appContext helpID="change_page_layouts_and_apply_style"
+               path="change_page_layouts_and_apply_style.html"/>
+   <appContext helpID="overwrite_base_xsl_fo_styles"
+               path="overwrite_base_xsl_fo_styles.html"/>
+</map>
